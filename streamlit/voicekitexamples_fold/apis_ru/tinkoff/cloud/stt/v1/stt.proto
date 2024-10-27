@@ -1,0 +1,189 @@
+syntax = "proto3";
+
+package tinkoff.cloud.stt.v1;
+option go_package = "github.com/Tinkoff/voicekit-examples/golang/pkg/tinkoff/cloud/stt/v1";
+option objc_class_prefix = 'TVKSR';
+
+import "google/protobuf/duration.proto";
+import "google/api/annotations.proto";
+import "tinkoff/cloud/longrunning/v1/longrunning.proto";
+
+service SpeechToText { // Распознавание речи.
+  rpc Recognize(RecognizeRequest) returns (RecognizeResponse) { // Метод для распознавания аудио целиком: загружаем аудио полностью, получаем полный ответ.
+    option (google.api.http) = {
+      post: "/v1/stt:recognize"
+      body: "*"
+    };
+  }
+  rpc StreamingRecognize(stream StreamingRecognizeRequest)
+    returns (stream StreamingRecognizeResponse); // Метод для поточного распознавания.
+
+  rpc LongRunningRecognize(LongRunningRecognizeRequest) returns (longrunning.v1.Operation) { // Метод для создания задачи отложенного распознавания аудио. Созданная операция существует в течение ограниченного времени, после чего автоматически удаляется.
+    option (google.api.http) = {
+      post: "/v1/stt:longrunningrecognize"
+      body: "*"
+    };
+  }
+
+  rpc StreamingUnaryRecognize(stream StreamingUnaryRecognizeRequest) returns (RecognizeResponse) { // Метод для синхронного распознавания аудио: загружаем аудио по частям, получаем результат после загрузки всего аудио.
+    option (google.api.http) = {
+      post: "/v1/stt:streaming_unary_recognize";
+      body: "*";
+    };
+  }
+}
+
+enum AudioEncoding { // Формат кодирования аудио. Задаёт и контейнер, и кодек.
+  ENCODING_UNSPECIFIED = 0; // <i>Не задан - недопустимое значение.</i> Используется в качестве значения по умолчанию для исключения случайных ошибок.
+  LINEAR16 = 1; // PCM без заголовков с целыми знаковыми 16-битными сэмплами в линейном распределении.
+  reserved "FLAC"; reserved 2;
+  MULAW = 3; // PCM без заголовков с 8-битными сэмплами в распределении Mu-law (aka PCMU).
+  reserved "AMR"; reserved 4;
+  reserved "AMR_WB"; reserved 5;
+  reserved "OGG_OPUS"; reserved 6;
+  reserved "SPEEX_WITH_HEADER_BYTE"; reserved 7;
+  ALAW = 8; // PCM без заголовков с 8-битными сэмплами в распределении A-law (aka PCMA).
+  reserved "LINEAR32F"; reserved 9; // Устаревшее.
+  reserved "OGG_VORBIS"; reserved 10;
+  RAW_OPUS = 11; // Фрэймы Opus, запакованные в сообщения Protobuf.<br/><b>ВАЖНО</b>: каждый фрэйм Opus должен быть запакован в поле "content" сообщения RecognitionAudio.<br/>При этом, каждый фрэйм необходимо отправлять ровно так, как он был закодирован.<br/>Т. е. нельзя просто так взять и сконкатенировать несколько фрэймов Opus и отправить их одним куском в "content".
+  MPEG_AUDIO = 12; // Аудиопоток MPEG.
+  ADTS_AAC = 13; // AAC аудио в ADTS потоке
+  RAW_AAC_LC = 14; // AAC LC (Low Complexy) фрэймы, запакованные в сообщения Protobuf. Поддерживается только в стриминговых методах.<br/> Важно: Как и в RAW_OPUS формате, каждый фрэём должен быть отправляться индивидуально, каждый в своём сообщении.
+  RAW_ER_AAC_LD = 15; // ER AAC LD фрэймы, запакованные в сообщения Protobuf. Поддерживается только в стриминговых методах.<br/> Важно: Как и в RAW_OPUS формате, каждый фрэём должен быть отправляться индивидуально, каждый в своём сообщении.
+}
+
+message RecognitionAudio { // Аудио для распознавания.
+  oneof audio_source {
+    bytes content = 1; // Входящее аудио целиком.
+    string uri = 2; // <i>На данный момент допустимо только внутри LongRunningRecognizeRequest.</i> URI входящего аудио. <br/>Должен соответствовать формату ```storage://s3.api.tinkoff.ai/inbound/<имя_файла>```<br/>Подробнее см в разделе [Загрузка файлов для отложенной обработки](longrunnings3api.md).
+  }
+}
+
+message SpeechContextPhrase { // Фраза для распознавания с повышенной (или пониженной) вероятностью.
+  string text = 1; // Текст фразы для распознавания с повышенной (или пониженной) вероятностью. Не рекомендуется задавать фразы короче 5 символов.
+  float score = 2; // Вес фразы для распознавания с повышенной (или пониженной) вероятностью. Используется значение `1.0`, если не задано. Рекомендуемый диапазон значений `[1.0, 10.0]`, бОльшие значения могут ухудшить качество распознавания. Можно указывать отрицательные значения в диапазоне `[-10.0, -1.0]`, чтобы фраза или слово распознавалось с пониженной вероятностью.
+}
+
+message SpeechContext { // Набор фраз для распознавания с повышенной (или пониженной) вероятностью.
+  reserved 1; // Устаревшее.
+  reserved 2; // Устаревшее.
+  repeated SpeechContextPhrase phrases = 3; // Фразы для распознавания с повышенной (или пониженной) вероятностью.
+  string speech_context_dictionary_id = 4; // Идентификатор контекстного словаря в облаке.
+}
+
+message WordInfo { // Детальная информация по слову внутри фразы.
+  google.protobuf.Duration start_time = 1; // Время начала слова внутри аудиопотока на входе.
+  google.protobuf.Duration end_time = 2; // Время конца слова внутри аудиопотока на входе.
+  string word = 3; // Слово внутри фразы.
+  float confidence = 4; // Относительный показатель уверенности (относительно других слов в фразе и слов в альтернативных гипотезах при конфигурации запроса с max_alternatives > 1). Значение может быть отрицательным.
+}
+
+message VoiceActivityDetectionConfig { // Структура для переопределения настроек VAD (все поля опциональны).
+  float min_speech_duration = 1; // <i>Игнорируется на данный момент.</i> Минимальная длительность фразы при определении VAD в секундах.
+  float max_speech_duration = 2; // <i>Игнорируется на данный момент.</i> Максимальная длительность фразы при определении VAD в секундах.
+  float silence_duration_threshold = 3; // Длительность тишины в секундах, при которой фраза считается завершённой. Значение по умолчанию зависит от конфигурации сервиса.
+  float silence_prob_threshold = 4; // Пороговое значение вероятности тишины (в диапазоне от 0.0 до 1.0). При вероятности тишины ниже этого значения фрагмент аудио считается тишиной. Значение по умолчанию зависит от конфигурации сервиса.
+  float aggressiveness = 5; // <i>Не используется на данный момент.</i>
+  float silence_max = 6; // Максимальная длительность паузы, после которой фраза считается завершенной, в секундах
+  float silence_min = 7; // Минимальная длительность паузы, после которой фраза считается завершенной, в секундах
+}
+
+message RecognitionConfig { // Общие настройки для распознавания.
+  AudioEncoding encoding = 1; // Формат кодирования аудио. Задаёт и контейнер, и кодек. Должен задаваться явно.
+  uint32 sample_rate_hertz = 2; // Частота дискретизации аудио на входе в Герцах.<br/>Для MPEG_AUDIO должна соответствовать частоте дискретизации закодированного аудио. Должна задаваться явно.
+  string language_code = 3; // <i>Игнорируется на данный момент.</i> Язык речи для распознавания.
+  uint32 max_alternatives = 4; // Максимальное количество версий фраз в моменте для финальных и промежуточных результатов. Значение по умолчанию: 1.
+  bool profanity_filter = 5; // Включает фильтр ненормативной лексики для первой (наиболее вероятной) версии финальной гипотезы. В отфильтрованных словах будет оставлена первая буква, остальные буквы будут заменены на символ звёздочки.
+  repeated SpeechContext speech_contexts = 6; // Набор фраз для распознавания с повышенной (или пониженной) вероятностью.
+  reserved "enable_word_time_offsets"; reserved 7;
+  bool enable_automatic_punctuation = 8; // Включает автоматическую расстановку пунктуации и прописных букв для первой (наиболее вероятной) версии финальной гипотезы.
+  reserved "metadata"; reserved 9;
+  string model = 10; // Модель распознавания. В случае если поле не задано, используется модель по умолчанию.
+  reserved "use_enhanced"; reserved 11;
+  uint32 num_channels = 12; // Количество каналов для входящего аудио. Для MPEG_AUDIO должно соответствовать количеству каналов в аудиопотоке.
+  oneof vad {
+    bool do_not_perform_vad = 13; // Флаг выключающий разбиение на фразы, т. е. VAD.<br/>Весь распознанный текст будет получен в виде одной фразы.
+    VoiceActivityDetectionConfig vad_config = 14; // Структура для переопределения настроек VAD.
+  }
+  reserved 15;
+  bool enable_denormalization = 16; // Включает автоматическое преобразование числительных из текстовой формы в цифровую. Применяется только для первой (наиболее вероятной) версии гипотезы.
+  bool enable_sentiment_analysis = 17; // Включает определение эмоций: негативная или нейтральная. Используется для каждой финальной гипотезы. На данный момент находится на стадии бета-тестирования. Работает только в Recognize.
+  bool enable_gender_identification = 18; // Включает определение пола: мужской или женский. Используется для каждой финальной гипотезы. На данный момент находится на стадии бета-тестирования.
+}
+
+message RecognizeRequest { // Запрос на распознавание аудио по методу Recognize. Максимальный размер сообщения — 32 Мб.
+  RecognitionConfig config = 1; // Конфигурация распознавания.
+  RecognitionAudio audio = 2; // Аудио для распознавания.
+}
+
+message SpeechRecognitionAlternative { // Версия распознанной фразы (или части фразы в случае промежуточной гипотезы).
+  string transcript = 1; // Распознанный текст.
+  float confidence = 2; // Относительный показатель уверенности (относительно других альтернативных гипотез при конфигурации с max_alternatives > 1).
+  repeated WordInfo words = 3; // Список отдельных слов внутри фразы.
+}
+
+message SpeechSentimentAnalysisResult { // Результаты определения эмоций.
+  float negative_prob_audio = 1; // Вероятность негативной эмоции, полученная из аудио фразы.
+  float negative_prob_audio_text  = 2; //  Вероятность негативной эмоции, полученная из аудио фразы и распознанного текста.
+}
+
+message SpeechGenderIdentificationResult {  // Результаты определения пола.
+  float male_proba = 1; // Вероятность, что пол спикера мужской.
+  float female_proba = 2; // Вероятность, что пол спикера женский. Гарантируется, что male_proba + female_proba = 1.
+}
+
+message SpeechRecognitionResult { // Распознанная фраза для указанного аудио канала.
+  repeated SpeechRecognitionAlternative alternatives = 1; // Список версий фразы отсортированных по убыванию confidence.
+  int32 channel = 2; // Канал, к которому относится версия фразы (нумерация с 0).
+  google.protobuf.Duration start_time = 3; // Время начала фразы внутри аудиопотока на входе.
+  google.protobuf.Duration end_time = 4; // Время конца фразы внутри аудиопотока на входе.
+  SpeechSentimentAnalysisResult sentiment_analysis_result = 5; // Результаты определения эмоций.
+  SpeechGenderIdentificationResult gender_identification_result = 6; // Результаты определения пола.
+}
+
+message RecognizeResponse { // Ответ с распознанными фразами по методу Recognize.
+  repeated SpeechRecognitionResult results = 1; // Распознанные фразы.
+}
+
+message InterimResultsConfig { // Конфигурация режима промежуточных гипотез.
+  bool enable_interim_results = 1; // Флаг для включения промежуточных гипотез. Выключены по умолчанию.
+  float interval = 2; // Желаемый интервал отправки промежуточных гипотез в секундах.<br/>Реальный интервал между гипотезами выбирается на основе внутреннего устройства сервиса в угоду минимизации задержки отдачи актуальных данных.
+}
+
+message LongRunningRecognizeRequest { // Запрос на создание задачи отложенного распознавания по методу LongRunningRecognize.
+  RecognitionConfig config = 1; // Конфигурация распознавания.
+  RecognitionAudio audio = 2; // Аудио для распознавания.<br/>В отличие от RecognizeRequest, тут допустимо использование Uri к ресурсу, загруженному через [S3-совместимое хранилище](longrunnings3api.md)
+  string group = 3; // Группа, в которую следует поместить операцию.<br/>Это произвольная строка, позволяющая объединять операции распознавания в логические группы.<br/>Пустая строка является допустимым значением.
+}
+
+message StreamingRecognitionConfig { // Конфигурация распознавания для вызова методом StreamingRecognize. Должна отправляться строго в первом сообщении вызова.
+  RecognitionConfig config = 1; // Конфигурация распознавания.
+  bool single_utterance = 2; // Флаг для включения режима одной фразы. В этом режиме распознавание завершается сервисом сразу после распознавания первой фразы.
+  InterimResultsConfig interim_results_config = 3; // Конфигурация для промежуточных гипотез. Т. е. версий текста в момент когда пришла лишь часть аудио, относящегося к фразе.
+}
+
+message StreamingRecognizeRequest { // Запрос на распознавание по методу StreamingRecognize (сообщение от клиента к серверу).<br/>Первым должно быть отправлено сообщение с заполненным `streaming_config`, а все последующие сообщения должны отправляться с заполненным `audio_content`. Максимальный размер сообщения — 32 Мб.
+  oneof streaming_request {
+    StreamingRecognitionConfig streaming_config = 1; // Конфигурация распознавания для поточного вызова. Должна отправляться строго в первом сообщении вызова.
+    bytes audio_content = 2; // Фрагмент аудио на входе. Фрагменты должны отправляться после сообщения с конфигурацией распознавания.
+  }
+}
+
+message StreamingRecognitionResult { // Распознанная фраза по методу StreamingRecognize.
+  SpeechRecognitionResult recognition_result = 1; // Результат распознавания.
+  bool is_final = 2; // Выставлено в true если пришла финальная гипотеза. Значение false проставляется для промежуточных гипотез.
+  float stability = 3; // <i>Не используется на данный момент.</i> Показатель стабильности распознавания.
+}
+
+message StreamingRecognizeResponse { // Ответ с распознанными фразами (сообщение от сервера к клиенту).
+  reserved 1;
+  repeated StreamingRecognitionResult results = 2; // Распознанные фразы.
+  reserved 3;
+}
+
+message StreamingUnaryRecognizeRequest { // Запрос на распознавание аудио по методу StreamingUnaryRecognize.<br/>Первым должно быть отправлено сообщение с заполненным `config`, а все последующие сообщения должны отправляться с заполненным `audio_content`. Максимальный размер сообщения — 32 Мб.
+  oneof streaming_unary_request {
+    RecognitionConfig config = 1; // Конфигурация распознавания. Должна отправляться строго в первом сообщении вызова.
+    bytes audio_content = 2; // Фрагмент аудио. Фрагменты должны отправляться после сообщения с конфигурацией распознавания.
+  }
+}

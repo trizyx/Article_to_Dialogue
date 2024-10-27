@@ -1,0 +1,22 @@
+services:
+  server:
+    build: ./TinkoffCuetaBaseline
+    restart: always
+    stop_signal: SIGINT
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    # volumes:
+    #   - /cu_in_ml/DB/ML_server/main.db:/app/main.db
+
+  streamlit:
+    build: ./streamlit
+    restart: always
+    stop_signal: SIGINT
+    env_file:
+      - .env
+    ports:
+      - "8501:8501"
+    # volumes:
+    #   - /cu_in_ml/DB/ML_server/main.db:/app/main.db

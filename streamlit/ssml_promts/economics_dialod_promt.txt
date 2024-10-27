@@ -1,0 +1,75 @@
+<speak>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="98%" rate="98%">Привет, пап!</prosody></s> <s><prosody pitch="97%" rate="99%">Я прочитала статью о каком-то аукционе в Китае, но не совсем поняла, о чем там речь.</prosody></s> <s><prosody pitch="98%" rate="99%">Можешь объяснить?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="92%" rate="95%">Конечно!</prosody></s> <prosody pitch="90%" rate="95%">Статья рассказывает о том, как в Китае проводятся аукционы для размещения новых акций компаний, которые уже публичные.</prosody> <s>Они назначают определенную цель по деньгам, <emphasis level="moderate">которые хотят собрать</emphasis>, и это сильно влияет на процесс аукциона.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="97%">А что такое аукцион?</prosody></s> <s><prosody pitch="98%" rate="99%">Как он работает?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="91%" rate="95%">Аукцион — это когда люди делают ставки,</prosody></s> <s>и тот, кто предлагает самую высокую цену, выигрывает и покупает товар.</s> <prosody pitch="90%" rate="96%">В этом случае товаром являются акции компании.</prosody> <s>Продавец устанавливает минимальную цену, от которой начинается аукцион, и максимальное количество акций, которые можно продать.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="97%" rate="98%">Значит, помимо цен здесь есть какая-то цель по деньгам?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="92%" rate="95%">Да, именно!</prosody></s> <prosody pitch="90%" rate="94%">Продавец заранее устанавливает, сколько денег он хочет собрать от продажи акций.</prosody> <s>Если он видит, что скидка на акции и цены, которые он хочет установить, соответствуют этой цели, он будет успешнее собирать деньги.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="98%">Но почему важно, чтобы люди делали ‘честные’ ставки?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="91%" rate="96%">Когда участники аукциона ставят честные ставки,</prosody></s> <s>это помогает продавцу лучше понять, какая цена имеется у акций.</s> <prosody pitch="92%" rate="95%">Если все ставят реальную цену,</prosody> <s>то продавец может выставить желаемое количество акций по такой цене, чтобы собрать нужную сумму.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="97%" rate="98%">А какие результаты были у этого метода в Китае?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="89%" rate="95%">Исследование показало, что такой подход действительно работает хорошо.</prosody></s> <s>Реальные цены акций почти совпадали с теми,</s> <prosody pitch="91%" rate="95%">которые можно было бы получить, если бы все ставили честные ставки.</prosody> <s>Это означает, что доходы от аукционов были близки к идеальным.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="99%">Звучит интересно!</prosody></s> <s><prosody pitch="97%" rate="99%">А какие еще преимущества у такого подхода?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Основное преимущество — это возможность более точного прогнозирования доходов для компании.</prosody></s> <prosody pitch="92%" rate="95%">Кроме того, такая система уменьшает желание участников делать заниженные ставки,</prosody> <s>тем самым улучшая общую эффективность аукциона.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="97%" rate="99%">А почему другие страны не используют такие аукционы для новых акций?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="95%">В других странах возникли трудности с использованием таких аукционов для акций,</prosody></s> <prosody pitch="92%" rate="96%">возможно из-за сложности процесса или недостатка понимания со стороны участников.</prosody> <s>Но китайский опыт показывает, что такой метод может быть эффективным.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="97%" rate="98%">Значит, использовать аукцион с целью по деньгам — это хороший шаг для компаний?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="92%" rate="95%">Да, именно!</prosody></s> <prosody pitch="90%" rate="94%">Это может помочь им собирать деньги более эффективно и с меньшим риском.</prosody> <s>Статья подчеркивает, что такой подход увеличивает <emphasis level="moderate">прозрачность</emphasis> и основательно помогает в процессе сбора капитала.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="98%" rate="99%">Спасибо, пап!</prosody></s> <s><prosody pitch="97%" rate="98%">Теперь я лучше понимаю, о чем была статья!</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="95%">Пожалуйста!</prosody></s> <prosody pitch="91%" rate="95%">Рад был помочь.</prosody> <s>Если будут еще вопросы, не стесняйся спрашивать!</s></p>
+    </voice>
+    <break time="600ms"/>
+</speak>

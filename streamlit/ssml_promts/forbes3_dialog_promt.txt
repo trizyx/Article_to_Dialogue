@@ -1,0 +1,79 @@
+<speak>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="95%" rate="98%">Пап, привет!</prosody></s> <s>Я прочитала статью о самых высокооплачиваемых футболистах, но всё равно немного запуталась.</s> <s>Можешь объяснить, о чем там речь?</s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="92%" rate="95%">Привет! Да, конечно.</prosody></s> <prosody pitch="90%" rate="94%">Статья рассказывает о том, кто из футболистов зарабатывает больше всего денег в этом сезоне.</prosody> <s>Например, там есть <emphasis level="moderate">Криштиану Роналду</emphasis>, который снова на первом месте.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="99%">А почему именно он?</prosody></s> <s>Какую сумму он получает?</s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="91%" rate="93%">Он заработает около <emphasis level="moderate">285 миллионов долларов</emphasis>, включая деньги, которые получает от клуба, и от рекламы.</prosody></s> <prosody pitch="89%" rate="95%">На самом деле, его зарплата на поле — это примерно <emphasis level="moderate">220 миллионов долларов</emphasis>, а остальное идет от других источников, например, рекламных контрактов.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="99%">Вау, это много!</prosody></s> <s>А кто еще в этом списке?</s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Следующий — <emphasis level="moderate">Лионель Месси</emphasis>.</prosody></s> <prosody pitch="92%" rate="93%">Он занимает второе место и зарабатывает около <emphasis level="moderate">135 миллионов долларов</emphasis>, из которых 60 миллионов — это его зарплата в клубе, а 75 миллионов — от рекламных соглашений.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="95%" rate="99%">Получается, реклама помогает им так много зарабатывать?</prosody></s> <s>Как это работает?</s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="96%">Да, именно так!</prosody></s> <prosody pitch="92%" rate="94%">Футболисты становятся популярными благодаря своей игре, и компании хотят с ними сотрудничать, чтобы продвигать свои товары.</prosody> <s>Чем больше у игрока подписчиков в соцсетях, тем больше шанс получить выгодные контракты.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="99%">Понятно.</prosody></s> <s>А что насчет остальных футболистов в списке?</s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">В списке еще есть <emphasis level="moderate">Неймар</emphasis>, <emphasis level="moderate">Бензема</emphasis>, <emphasis level="moderate">Мбаппе</emphasis> и другие.</prosody></s> <prosody pitch="92%" rate="95%">Например, Неймар зарабатывает <emphasis level="moderate">110 миллионов долларов</emphasis>, а Мбаппе — <emphasis level="moderate">90 миллионов долларов</emphasis>.</prosody> <s>Они тоже получают деньги за игру и за сотрудничество с брендами.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="95%" rate="99%">Почему некоторые футболисты переехали в Саудовскую Аравию?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="91%" rate="94%">Многие из них получили предложения с очень высокими зарплатами от саудовских клубов.</prosody></s> <prosody pitch="89%" rate="95%">Это связано с тем, что в Саудовской Аравии сейчас активно развивают футбол и готовы тратить большие деньги, чтобы привлечь звезд.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="99%">А как это повлияло на другие лиги, например, английскую?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="93%">Когда Саудовская Аравия начала тратить много денег на трансферы, это привело к тому, что английские клубы тоже много покупали игроков.</prosody></s> <prosody pitch="91%" rate="95%">Но сейчас расходы снизились, и английская лига тоже испытывает трудности, потому что меньше денег на трансферы.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="95%" rate="99%">Интересно!</prosody></s> <s>А как насчет будущего этих футболистов?</s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="89%" rate="94%">У некоторых из них контракты истекают, что создает неопределенность.</prosody></s> <prosody pitch="90%" rate="93%">Например, Мохамед Салах из 'Ливерпуля' сказал, что это может быть его последний сезон в клубе.</prosody> <s>Возможны переходы в другие команды, в том числе и в Саудовскую Аравию.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="99%">Я поняла!</prosody></s> <s>В общем, стать высокооплачиваемым футболистом не только про игру, но и про рекламу и большие контракты.</s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="95%">Правильно!</prosody></s> <prosody pitch="91%" rate="94%">И даже небольшие изменения на рынке могут сильно повлиять на их доходы.</prosody> <s>Главное, что они все равно остаются знаменитыми и популярными, а это тоже приносит хорошие деньги.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="95%" rate="99%">Спасибо, пап!</prosody></s> <s>Теперь мне всё стало яснее!</s></p>
+    </voice>
+    <break time="700ms"/>
+</speak>

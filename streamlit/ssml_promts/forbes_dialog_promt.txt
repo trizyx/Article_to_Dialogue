@@ -1,0 +1,83 @@
+<speak>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="97%" rate="99%">Пап, привет!</prosody></s> <prosody pitch="95%" rate="98%">Я прочитала статью о каком-то бизнесмене, но не совсем поняла, о чем речь.</prosody> <s>Можешь объяснить?</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="92%" rate="95%">Привет!</prosody></s> <prosody pitch="91%" rate="95%">Статья рассказывает о предпринимателе по имени Эрик Лефкофски, который основал компанию <emphasis level="moderate">Tempus AI</emphasis>.</prosody> <s>Он хочет изменить медицинскую сферу и помочь людям с болезнями, используя технологии и данные.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="97%">А что такое Tempus AI? Почему это важно?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Tempus AI</prosody> <s>— это компания, которая собирает данные о пациентах и использует их для более точной диагностики заболеваний.</s> <prosody pitch="90%" rate="96%">Например, они занимаются анализом образцов при раке, чтобы улучшить лечение.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="97%" rate="99%">Пап, а что случилось с его женой, что подвигло его на создание этой компании?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="95%">У его жены диагностировали рак молочной железы,</prosody></s> <prosody pitch="92%" rate="95%">и он заметил, что мало данных используется для ее лечения.</prosody> <s>Это вдохновило его создать компанию, которая соберет и проанализирует эти данные.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="98%">Как именно они используют технологии для помощи пациентам?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Они секвенируют, то есть анализируют, образцы опухолей пациентов,</prosody></s> <prosody pitch="91%" rate="96%">а потом используют искусственный интеллект для определения наилучшего лечения.</prosody> <s>Это помогает врачам делать более точные диагнозы.</s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="97%" rate="99%">Пап, а много ли людей работает в этой компании?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="95%">Да, в Tempus AI работает примерно 2300 сотрудников.</prosody></s> <prosody pitch="92%" rate="96%">Они недавно вышли на биржу, и капитализация компании достигла около 6 миллиардов долларов.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="97%">А он сам долго работал в этой компании?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Да, Лефкофски стал гендиректором Tempus AI и работает там уже девять лет.</prosody></s> <prosody pitch="91%" rate="95%">Это больше, чем в его предыдущих бизнесах, и для него это очень важно.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="97%" rate="99%">Значит, он действительно верит в эту компанию?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="95%">Определенно.</prosody></s> <prosody pitch="92%" rate="94%">Он считает, что Tempus AI может стать его главным достижением и даже чем-то большим, чем другие компании, которые он создавал.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="97%">А какие у них есть проблемы?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="95%">Tempus AI сталкивается с конкуренцией других компаний в сфере здравоохранения.</prosody></s> <prosody pitch="91%" rate="95%">Также они сейчас решают юридические вопросы с конкурентами из-за патентов.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="97%" rate="99%">Пап, что он планирует делать дальше?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Лефкофски надеется, что компания станет прибыльной в следующем году и будет развиваться.</prosody></s> <prosody pitch="92%" rate="95%">Он уверен, что Tempus AI может стать одной из крупнейших компаний в своей области.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="97%" rate="99%">Поняла, пап! Это действительно интересно.</prosody></s> <prosody pitch="96%" rate="98%">Значит, он хочет оставить хорошее наследие через свою работу.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="95%">Да, именно так.</prosody></s> <prosody pitch="91%" rate="94%">Он верит, что с помощью технологий можно изменить жизнь миллионов людей к лучшему.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+</speak>

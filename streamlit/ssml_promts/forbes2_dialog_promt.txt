@@ -1,0 +1,91 @@
+<speak>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="97%" rate="98%">Пап, привет!</prosody></s> <prosody pitch="95%" rate="96%">Я прочитала статью о OpenAI и Пентагоне, но не совсем поняла, в чем дело. Можешь объяснить?</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="95%">Привет! Да, конечно.</prosody></s> <prosody pitch="92%" rate="94%">Статья рассказывает о том, что компания OpenAI теперь сотрудничает с оборонными предприятиями и хочет работать с Пентагоном.</prosody></p>
+        <break time="400ms"/>
+        <p><s><prosody pitch="90%" rate="93%">Раньше у них были правила, которые запрещали использовать их технологии для военных целей,</prosody></s> <prosody pitch="91%" rate="95%">но они изменили это.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="99%">А почему они решили изменить свои правила?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="95%">Они решили начать сотрудничество, чтобы быстрее развивать технологии для армии.</prosody></s> <prosody pitch="92%" rate="94%">Это может помочь улучшить оборону и инструменты, которые на ней основаны.</prosody></p>
+        <break time="400ms"/>
+        <p><s><prosody pitch="90%" rate="95%">Например, приходят новые идеи, как использовать искусственный интеллект.</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="99%">Интересно! А кто им помогает с этим?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Им помогает компания Carahsoft,</prosody></s> <prosody pitch="92%" rate="95%">которая работает с правительством и помогает ему получать необходимые технологии.</prosody></p>
+        <break time="400ms"/>
+        <p><s><prosody pitch="90%" rate="93%">Carahsoft уже имеет большой опыт работы с Пентагоном.</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="98%">Но у Carahsoft были проблемы, да? Говорили, что их проверяют.</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Да, верно.</prosody></s> <prosody pitch="91%" rate="93%">В статье упоминали, что у Carahsoft были обыски из-за подозрений в сговоре и завышении цен на контракты с Минобороны.</prosody></p>
+        <break time="400ms"/>
+        <p><s><prosody pitch="90%" rate="95%">Это говорит о том, что в сотрудничестве между частными компаниями и правительством могут возникать серьезные вопросы.</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="99%">А как это влияет на OpenAI?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Это может привести к тому, что OpenAI получит доступ к государственным заказам и сможет предлагать свои технологии.</prosody></s></p>
+        <break time="400ms"/>
+        <p><s><prosody pitch="91%" rate="93%">Но с другой стороны, это создает и риски, так как использование искусственного интеллекта в военных целях вызывает много споров.</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="98%">А какие технологии OpenAI может предоставить армии?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="95%">Они могут предложить различные решения,</prosody></s> <prosody pitch="91%" rate="94%">например, облачные вычисления и инструменты на основе AI для анализа данных и написания документов.</prosody></p>
+        <break time="400ms"/>
+        <p><s><prosody pitch="90%" rate="95%">Это может упростить работу военных.</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="99%">Как это странно, использовать AI в армии. Легко ли вообще стартапам продвигать свои продукты к государству?</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Это непросто, но Carahsoft помогает,</prosody></s> <prosody pitch="91%" rate="95%">потому что у них есть связи и репутация.</prosody></p>
+        <break time="400ms"/>
+        <p><s><prosody pitch="90%" rate="93%">Когда стартапы упоминают Carahsoft, это может вызвать больший интерес к их продуктам.</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="99%">Пап, я поняла! OpenAI хочет разрабатывать технологии для армии, но не все в этом легко и безопасно.</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Верно.</prosody></s> <prosody pitch="91%" rate="95%">Важно следить за тем, как эти технологии используют.</prosody></p>
+        <break time="400ms"/>
+        <p><s><prosody pitch="90%" rate="93%">Это все еще новая область, и нужно быть внимательными к последствиям.</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="99%">Спасибо, пап! Теперь мне стало ясно, о чем статья.</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Пожалуйста! Если будут еще вопросы, всегда рад помочь.</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+</speak>

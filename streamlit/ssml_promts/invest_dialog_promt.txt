@@ -1,0 +1,95 @@
+<speak>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="97%">Пап, привет, я прочитала статью о плечевых фондах,</prosody></s> <prosody pitch="95%" rate="98%">но ничего не поняла, объясни, пожалуйста.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="92%" rate="95%">Привет! Да, конечно.</prosody></s> <prosody pitch="91%" rate="94%">Эта статья рассказывает о том, что на Московской бирже теперь готовы развивать <emphasis level="moderate">плечевые фонды</emphasis>.</prosody></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="91%" rate="94%">Это такие инвестиционные фонды, которые</prosody></s> <prosody pitch="90%" rate="94%">могут делать ставки на большее, чем у них есть.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="97%">А что значит 'плечевые фонды'?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="91%" rate="95%">Это фонды, которые используют заёмные деньги</prosody></s> <prosody pitch="90%" rate="93%">или специальные финансовые инструменты, чтобы увеличить свою прибыль.</prosody></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="92%" rate="95%">Например, если базовая инвестиция вырастет на 1%,</prosody></s> <prosody pitch="91%" rate="94%">то фонд может вырасти на 2% или даже 3%.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="97%">И почему это важно?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="91%" rate="95%">Это важно, потому что такие фонды</prosody></s> <prosody pitch="90%" rate="94%">могут привлечь больше инвесторов.</prosody></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="92%" rate="94%">На данный момент многие люди стали интересоваться инвестициями,</prosody></s> <prosody pitch="91%" rate="95%">и платформы готовы предложить новые варианты.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="97%">Пап, как это будет работать на практике?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="90%" rate="94%">Ну, сейчас на бирже начинают выпускать новые фонды,</prosody></s> <prosody pitch="91%" rate="94%">которые не только на золото, но и на другие товары.</prosody></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="92%" rate="94%">Например, будут специальные фонды, которые могут выплачивать доход</prosody></s> <prosody pitch="90%" rate="94%">не раз в год, а чаще.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="97%">Значит, инвестирование становится более доступным?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="91%" rate="95%">Да! Но нужно и больше регулирования,</prosody></s> <prosody pitch="90%" rate="94%">чтобы защищать инвесторов.</prosody></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="92%" rate="94%">Например, предложили увеличить налоговые вычеты,</prosody></s> <prosody pitch="90%" rate="95%">чтобы это было выгоднее для людей.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="97%">Как много людей уже инвестируют в такие фонды?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="91%" rate="95%">На прошлый месяц частные инвесторы вложили абсолютно рекордные суммы —</prosody></s> <prosody pitch="90%" rate="94%">около 70 миллиардов рублей только в паевые инвестиционные фонды.</prosody></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="97%">И что, фонды денежного рынка самые популярные?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="91%" rate="95%">Да, именно так!</prosody></s> <prosody pitch="90%" rate="94%">Люди всё больше интересуются фондами денежного рынка,</prosody></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="92%" rate="94%">и число людей, которые инвестируют в них, удвоилось с начала года.</prosody></s></p>
+    </voice>
+    <break time="600ms"/>
+    <voice name="sveta">
+        <p><s><prosody pitch="96%" rate="97%">Какие выводы можно сделать из этого?</prosody></s></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="91%" rate="95%">Можно сказать, что рынок готов к новым возможностям,</prosody></s> <prosody pitch="90%" rate="94%">и сейчас — хорошее время для инвестирования.</prosody></p>
+    </voice>
+    <break time="500ms"/>
+    <voice name="kovalev">
+        <p><s><prosody pitch="92%" rate="94%">Но важно помнить о рисках</prosody></s> <prosody pitch="90%" rate="94%">и правильно выбирать фонды.</prosody></p>
+    </voice>
+    <break time="700ms"/>
+</speak>
